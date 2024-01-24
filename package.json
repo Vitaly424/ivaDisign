@@ -1,12 +1,12 @@
 {
 	"scripts": {
 		"start:dev": "gulp",
-		"build:prod": "docs",
-		"lint:scss": "npx stylelint \"**/*.scss\"",
-		"lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+		"build:prod": "gulp docs",
+		"lint:scss": "npx stylelint \"./src/**/*.scss\"",
+		"lint:scss:fix": "npx stylelint \"./src/**/*.scss\" --fix",
 		"prettier": "npx prettier --write **/*.{js,html,scss}",
 		"lint:js": "eslint \"./src/**/*.{js,html}\"",
-		"lint:js:fix": "eslint \"**/*.{js,html}\" --fix"
+		"lint:js:fix": "eslint \"./src/**/*.{js,html}\" --fix"
 	},
 	"node": "20.10.0",
 	"babel": {
@@ -15,8 +15,8 @@
 		]
 	},
 	"lint-staged": {
-		"*.js": "eslint",
-		"*.scss": "stylelint"
+		"./src/**/*.js": "eslint",
+		"./src/**/*.scss": "stylelint"
 	},
 	"husky": {
 		"hooks": {

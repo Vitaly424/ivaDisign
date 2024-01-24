@@ -1,0 +1,49 @@
+@mixin media-mobile() {
+    @media (max-width: $breakpoint-mobile) {
+        @content;
+    }
+}
+
+@mixin media-tablet() {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin media-laptop() {
+    @media (max-width: $breakpoint-laptop) {
+        @content;
+    }
+}
+
+@mixin media-desktop() {
+    @media (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin font-face($font-family, $url, $weight, $style) {
+    @font-face {
+        font-weight: #{$weight};
+        font-family: '#{$font-family}';
+        font-style: $style;
+        src: url('../fonts/#{$url}.woff2') format('woff2');
+        font-display: swap;
+    }
+}
+
+@mixin hover() {
+    @media screen and (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin focus() {
+    @media screen and (hover: hover) {
+        &:focus {
+            @content;
+        }
+    }
+}

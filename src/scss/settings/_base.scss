@@ -1,0 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #2f2f32;
+    font-size: $font-size;
+    font-family: $font-main;
+    line-height: $line-height;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

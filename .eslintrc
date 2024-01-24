@@ -3,5 +3,21 @@
   "env": {
     "browser": true,
     "es2021": true
-  }
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "n/no-unpublished-require": "off",
+    "global-require": "off",
+    "func-names": "off",
+    "n/no-missing-import": "off"
+  },
+// "overrides": [
+//    {
+//      "files": ["./gulpfile.js"],
+//      "rules": {
+//       "import/extensions": "off"
+//      }
+//    }
+//  ],
+  "ignorePatterns": ["gulpfile.js"]
 }

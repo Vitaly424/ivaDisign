@@ -1,10 +1,11 @@
 /* Base */
-@import './base/reset';
-@import './base/vars';
-@import './base/base';
-@import './base/utils';
-@import './base/containers';
-@import './base/sticky-footer';
+@import 'abstracts/vars';
+@import 'abstracts/mixins';
+@import 'settings/normalize';
+@import 'settings/utils';
+@import 'settings/base';
+@import 'settings/sticky-footer';
 
 /* Blocks */
-@import './blocks/*';
+@import 'blocks/*.scss';
+
