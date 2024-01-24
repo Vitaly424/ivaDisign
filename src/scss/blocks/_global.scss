@@ -1,6 +1,11 @@
 .title {
     color: #000;
+    font-weight: 700;
     font-size: 32px;
+
+    &--center {
+        text-align: center;
+    }
 }
 
 .logo {
