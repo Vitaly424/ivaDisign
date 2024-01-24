@@ -1,7 +1,9 @@
 {
+	"homepage": "https://Vitaly424.github.io/ivaDisign",
 	"scripts": {
 		"start:dev": "gulp",
 		"build:prod": "gulp docs",
+		"deploy": "gh-pages -d build:prod",
 		"lint:scss": "npx stylelint \"./src/**/*.scss\"",
 		"lint:scss:fix": "npx stylelint \"./src/**/*.scss\" --fix",
 		"prettier": "npx prettier --write **/*.{js,html,scss}",
@@ -35,6 +37,7 @@
 		"eslint-config-airbnb-base": "^15.0.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-config-stylelint": "^20.0.0",
+		"gh-pages": "^6.1.1",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-babel": "^8.0.0",
