@@ -2,8 +2,8 @@
 	"homepage": "https://Vitaly424.github.io/ivaDisign",
 	"scripts": {
 		"start:dev": "gulp",
-		"build:prod": "gulp docs",
-		"deploy": "gh-pages -d build:prod",
+		"build": "gulp docs",
+		"deploy": "gh-pages -d build",
 		"lint:scss": "npx stylelint \"./src/**/*.scss\"",
 		"lint:scss:fix": "npx stylelint \"./src/**/*.scss\" --fix",
 		"prettier": "npx prettier --write **/*.{js,html,scss}",

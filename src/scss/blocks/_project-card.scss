@@ -1,0 +1,17 @@
+.project-card {
+    box-shadow: 0 0 5px 1px #ccc;
+
+    &__content {
+        padding: 10px;
+    }
+
+    &__text {
+        margin-bottom: 8px;
+        color: #939393;
+    }
+
+    &__price {
+        color: #868282;
+        font-weight: 700;
+    }
+}
