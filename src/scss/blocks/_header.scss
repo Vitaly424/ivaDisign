@@ -1,19 +1,18 @@
 .header {
-	padding: 20px 0;
-	background-image: url("../img/beton2.jpg");
-	background-size: cover;
+    padding: 15px 0;
+    background-color: #ddd9d6;
+    background-image: url('../img/beton2.jpg');
+    background-size: cover;
 
-	&__row {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-}
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.logo {
-	width: 100px;
-	height: 100px;
-
-	border-radius: 20px;
-	overflow: hidden;
+    &__inner {
+        display: flex;
+        align-items: baseline;
+        column-gap: 50px;
+    }
 }

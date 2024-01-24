@@ -1,9 +1,7 @@
 .intro {
+    padding-bottom: 20px;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
+    height: 400px;
     background-image: url('../img/bg-intro.jpg');
     background-position: center;
     background-size: cover;
@@ -18,10 +16,16 @@
         content: '';
     }
 
+    &__inner {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+    }
+
     &__title {
         position: relative;
         z-index: 2;
-        color: #fff;
-        font-size: 54px;
+        color: #e4e2e2;
+        font-size: 42px;
     }
 }
