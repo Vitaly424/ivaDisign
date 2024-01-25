@@ -2,6 +2,8 @@
     padding: 15px 0;
     background-size: cover;
 
+    //linear-gradient(180deg, rgba(51,51,51,1) 0%, rgba(11,11,11,0.6446953781512605) 100%)
+
     &__row {
         display: flex;
         align-items: center;
@@ -12,5 +14,32 @@
         display: flex;
         align-items: baseline;
         column-gap: 50px;
+    }
+
+    &__phone {
+        a {
+            position: relative;
+            color: #000;
+            font-size: 28px;
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                display: block;
+                width: 0;
+                height: 2px;
+                background: #282c34;
+                transform: translate(-50%);
+                transition: 0.3s;
+                content: '';
+            }
+
+            @include hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
     }
 }

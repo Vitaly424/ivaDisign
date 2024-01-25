@@ -27,21 +27,24 @@ const fileIncludeSetting = {
 };
 
 const plumberNotify = (title) => ({
-        errorHandler: notify.onError({
-            title,
-            message: 'Error <%= error.message %>',
-            sound: false,
-        }),
-    });
+    errorHandler: notify.onError({
+        title,
+        message: 'Error <%= error.message %>',
+        sound: false,
+    }),
+});
 
-gulp.task('html:dev', () => gulp
+gulp.task('html:dev', () =>
+    gulp
         .src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
         .pipe(changed('./build/', { hasChanged: changed.compareContents }))
         .pipe(plumber(plumberNotify('HTML')))
         .pipe(fileInclude(fileIncludeSetting))
-        .pipe(gulp.dest('./build/')));
+        .pipe(gulp.dest('./build/')),
+);
 
-gulp.task('sass:dev', () => gulp
+gulp.task('sass:dev', () =>
+    gulp
         .src('./src/scss/*.scss')
         .pipe(changed('./build/css/'))
         .pipe(plumber(plumberNotify('SCSS')))
@@ -49,35 +52,40 @@ gulp.task('sass:dev', () => gulp
         .pipe(sassGlob())
         .pipe(sass())
         .pipe(sourceMaps.write())
-        .pipe(gulp.dest('./build/css/')));
+        .pipe(gulp.dest('./build/css/')),
+);
 
-gulp.task('images:dev', () => (
-        gulp
-            .src('./src/img/**/*')
-            .pipe(changed('./build/img/'))
-            // .pipe(imagemin({ verbose: true }))
-            .pipe(gulp.dest('./build/img/'))
-    ));
+gulp.task('images:dev', () =>
+    gulp
+        .src('./src/img/**/*')
+        .pipe(changed('./build/img/'))
+        // .pipe(imagemin({ verbose: true }))
+        .pipe(gulp.dest('./build/img/')),
+);
 
-gulp.task('fonts:dev', () => gulp
+gulp.task('fonts:dev', () =>
+    gulp
         .src('./src/fonts/**/*')
         .pipe(changed('./build/fonts/'))
-        .pipe(gulp.dest('./build/fonts/')));
+        .pipe(gulp.dest('./build/fonts/')),
+);
 
-gulp.task('files:dev', () => gulp
+gulp.task('files:dev', () =>
+    gulp
         .src('./src/files/**/*')
         .pipe(changed('./build/files/'))
-        .pipe(gulp.dest('./build/files/')));
+        .pipe(gulp.dest('./build/files/')),
+);
 
-gulp.task('js:dev', () => (
-        gulp
-            .src('./src/js/*.js')
-            .pipe(changed('./build/js/'))
-            .pipe(plumber(plumberNotify('JS')))
-            // .pipe(babel())
-            .pipe(webpack(require("../webpack.config")))
-            .pipe(gulp.dest('./build/js/'))
-    ));
+gulp.task('js:dev', () =>
+    gulp
+        .src('./src/js/*.js')
+        .pipe(changed('./build/js/'))
+        .pipe(plumber(plumberNotify('JS')))
+        // .pipe(babel())
+        .pipe(webpack(require('../webpack.config')))
+        .pipe(gulp.dest('./build/js/')),
+);
 
 const serverOptions = {
     livereload: true,

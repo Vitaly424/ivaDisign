@@ -3,7 +3,27 @@
     gap: 24px;
 
     &__item {
+        position: relative;
         color: #000;
-        font-size: 32px;
+        font-size: 28px;
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #282c34;
+            transform: translate(-50%);
+            transition: 0.3s;
+            content: '';
+        }
+
+        @include hover {
+            &::after {
+                width: 100%;
+            }
+        }
     }
 }

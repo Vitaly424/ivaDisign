@@ -1,1 +1,7 @@
-//@include font-face("Gilroy-Black", "../../fonts/Gilroy-Regular", 400, normal);
+@font-face {
+    font-weight: 700;
+    font-family: 'Segoe-Print';
+    font-style: normal;
+    src: url('../fonts/SegoePrint.woff2') format('woff2');
+    font-display: swap;
+}
