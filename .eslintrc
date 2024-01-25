@@ -9,7 +9,10 @@
     "n/no-unpublished-require": "off",
     "global-require": "off",
     "func-names": "off",
-    "n/no-missing-import": "off"
+    "n/no-missing-import": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-vars": "off",
+    "sort-imports": "off"
   },
 // "overrides": [
 //    {

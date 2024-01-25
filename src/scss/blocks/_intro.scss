@@ -1,34 +1,41 @@
 .intro {
-    position: relative;
-    //height: 400px;
-    height: 100vh;
-    padding-bottom: 20px;
-    background-image: url('../img/intro/bg-intro1.jpg');
-    background-position: bottom;
-    background-size: cover;
-    background-attachment: fixed;
-
-    &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(0 0 0 / 30%);
-        content: '';
+    &__box {
+        padding: 14px;
     }
 
     &__inner {
+        position: relative;
         display: flex;
         align-items: center;
-        //align-items: flex-end;
         height: 100%;
+    }
+
+    &__wrapper {
+        position: relative;
+        height: 100vh;
+        padding-bottom: 20px;
+        background-position: bottom;
+        background-size: cover;
+        background-attachment: fixed;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0 0 0 / 20%);
+            content: '';
+        }
     }
 
     &__title {
         position: relative;
         z-index: 2;
-        color: #e4e2e2;
+
+        //color: #e4e2e2;
+        color: #fff;
+        font-weight: 700;
         font-size: 42px;
     }
 }

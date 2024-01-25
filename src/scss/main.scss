@@ -6,6 +6,9 @@
 @import 'settings/base';
 @import 'settings/sticky-footer';
 
+// libs
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/modules/effect-fade';
+
 /* Blocks */
 @import 'blocks/*.scss';
-

@@ -1,4 +1,5 @@
-import mobileNav from './modules/mobile-nav';
+import { introSlider } from './modules/introSlider';
 
-mobileNav();
-
+document.addEventListener('DOMContentLoaded', () => {
+    introSlider();
+});

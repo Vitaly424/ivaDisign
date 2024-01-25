@@ -68,5 +68,8 @@
 		"stylelint-config-rational-order": "^0.1.2",
 		"stylelint-config-standard-scss": "^13.0.0",
 		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"swiper": "^11.0.5"
 	}
 }
